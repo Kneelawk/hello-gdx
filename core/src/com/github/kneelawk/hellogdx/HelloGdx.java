@@ -13,6 +13,7 @@ import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.loader.ObjLoader;
+import com.badlogic.gdx.physics.bullet.Bullet;
 
 public class HelloGdx extends ApplicationAdapter {
 	private ModelBatch models;
@@ -24,6 +25,8 @@ public class HelloGdx extends ApplicationAdapter {
 
 	@Override
 	public void create() {
+		Bullet.init();
+
 		Gdx.gl.glClearColor(0.1f, 0.1f, 0.1f, 1f);
 
 		models = new ModelBatch();
