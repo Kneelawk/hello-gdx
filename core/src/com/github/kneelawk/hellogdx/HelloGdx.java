@@ -1,6 +1,6 @@
 package com.github.kneelawk.hellogdx;
 
-import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -15,7 +15,7 @@ import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.loader.ObjLoader;
 import com.badlogic.gdx.physics.bullet.Bullet;
 
-public class HelloGdx extends ApplicationAdapter {
+public class HelloGdx extends Game {
 	private ModelBatch models;
 	private PerspectiveCamera cam;
 	private Environment environment;
