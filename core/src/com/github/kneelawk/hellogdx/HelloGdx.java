@@ -5,14 +5,23 @@ import com.badlogic.gdx.physics.bullet.Bullet;
 
 public class HelloGdx extends Game {
 
+	private MainMenu mainMenu;
 	private HelloGdxScreen helloGdx;
 
 	@Override
 	public void create() {
 		Bullet.init();
 
+		mainMenu = new MainMenu();
 		helloGdx = new HelloGdxScreen();
 
-		setScreen(helloGdx);
+		setScreen(mainMenu);
+	}
+
+	@Override
+	public void dispose() {
+		super.dispose();
+		mainMenu.dispose();
+		helloGdx.dispose();
 	}
 }
