@@ -1,20 +1,34 @@
 package com.github.kneelawk.hellogdx;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.List;
+import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
-public class MainMenu extends ScreenAdapter {
+public class MainMenu extends ScreenGame {
 
 	private Stage stage;
 
-	public MainMenu() {
+	private HelloGdx application;
+	private Array<String> games;
+
+	public MainMenu(HelloGdx application, Array<String> games) {
+		this.application = application;
+		this.games = games;
+	}
+
+	@Override
+	public void init() {
 		stage = new Stage(new ScreenViewport());
 
 		TextureAtlas atlas = new TextureAtlas(Gdx.files.absolute("skins/default-k/default-k.atlas"));
@@ -25,19 +39,50 @@ public class MainMenu extends ScreenAdapter {
 
 		Table table = new Table(skin);
 		table.setFillParent(true);
+		table.defaults().pad(5);
 		stage.addActor(table);
 
 		Image image = new Image(skin.getDrawable("hello-libgdx"));
-		table.add(image).colspan(3);
+		table.add(image).colspan(2);
+
+		table.row();
+
+		List<String> list = new List<>(skin);
+		list.setItems(games);
+		ScrollPane listScroller = new ScrollPane(list, skin);
+		listScroller.setWidth(400);
+		table.add(listScroller).colspan(2);
+
+		table.row();
+
+		TextButton quit = new TextButton("Quit", skin);
+		table.add(quit);
+
+		quit.addListener(new ChangeListener() {
+			@Override
+			public void changed(ChangeEvent event, Actor actor) {
+				application.exit();
+			}
+		});
+
+		TextButton play = new TextButton("Play", skin);
+		table.add(play);
+
+		play.addListener(new ChangeListener() {
+			@Override
+			public void changed(ChangeEvent event, Actor actor) {
+				application.play(list.getSelected());
+			}
+		});
 	}
 
 	@Override
-	public void show() {
+	public void showGame() {
 		Gdx.input.setInputProcessor(stage);
 	}
 
 	@Override
-	public void hide() {
+	public void hideGame() {
 		Gdx.input.setInputProcessor(null);
 	}
 

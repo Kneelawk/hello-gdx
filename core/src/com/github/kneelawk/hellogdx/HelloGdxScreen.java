@@ -1,7 +1,6 @@
 package com.github.kneelawk.hellogdx;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
@@ -14,7 +13,7 @@ import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.loader.ObjLoader;
 
-public class HelloGdxScreen extends ScreenAdapter {
+public class HelloGdxScreen extends ScreenGame {
 	private ModelBatch models;
 	private PerspectiveCamera cam;
 	private Environment environment;
@@ -22,7 +21,8 @@ public class HelloGdxScreen extends ScreenAdapter {
 	private ModelInstance instance;
 	private float rotation;
 
-	public HelloGdxScreen() {
+	@Override
+	public void init() {
 		Gdx.gl.glClearColor(0.1f, 0.1f, 0.1f, 1f);
 
 		models = new ModelBatch();
