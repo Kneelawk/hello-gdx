@@ -29,7 +29,7 @@ public class MainMenu extends ScreenGame {
 
 	@Override
 	public void init() {
-		Gdx.gl.glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+		Gdx.gl.glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
 		stage = new Stage(new FitViewport(800, 480));
 
