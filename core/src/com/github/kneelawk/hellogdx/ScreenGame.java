@@ -15,6 +15,9 @@ public abstract class ScreenGame implements Screen {
 	public void hideGame() {
 	}
 
+	public void disposeGame() {
+	}
+
 	@Override
 	public void render(float delta) {
 	}
@@ -32,10 +35,6 @@ public abstract class ScreenGame implements Screen {
 	}
 
 	@Override
-	public void dispose() {
-	}
-
-	@Override
 	public final void show() {
 		if (!initialized) {
 			init();
@@ -47,6 +46,13 @@ public abstract class ScreenGame implements Screen {
 	@Override
 	public final void hide() {
 		hideGame();
+	}
+
+	@Override
+	public void dispose() {
+		if (initialized) {
+			disposeGame();
+		}
 	}
 
 }

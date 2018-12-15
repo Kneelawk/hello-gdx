@@ -40,6 +40,8 @@ public class HelloGdx extends Game {
 	public void dispose() {
 		super.dispose();
 		mainMenu.dispose();
-		games.values().forEach(screen -> screen.dispose());
+		for (Screen game : games.values()) {
+			game.dispose();
+		}
 	}
 }

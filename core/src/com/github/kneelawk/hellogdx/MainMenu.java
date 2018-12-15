@@ -13,7 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Array;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 
 public class MainMenu extends ScreenGame {
 
@@ -29,13 +29,15 @@ public class MainMenu extends ScreenGame {
 
 	@Override
 	public void init() {
-		stage = new Stage(new ScreenViewport());
+		Gdx.gl.glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 
-		TextureAtlas atlas = new TextureAtlas(Gdx.files.absolute("skins/default-k/default-k.atlas"));
+		stage = new Stage(new FitViewport(800, 480));
+
+		TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("skins/default-k/default-k.atlas"));
 
 		Skin skin = new Skin();
 		skin.addRegions(atlas);
-		skin.load(Gdx.files.absolute("skins/default-k/default-k.json"));
+		skin.load(Gdx.files.internal("skins/default-k/default-k.json"));
 
 		Table table = new Table(skin);
 		table.setFillParent(true);
@@ -99,7 +101,7 @@ public class MainMenu extends ScreenGame {
 	}
 
 	@Override
-	public void dispose() {
+	public void disposeGame() {
 		stage.dispose();
 	}
 

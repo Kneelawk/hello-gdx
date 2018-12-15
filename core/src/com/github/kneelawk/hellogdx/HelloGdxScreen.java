@@ -58,7 +58,7 @@ public class HelloGdxScreen extends ScreenGame {
 	}
 
 	@Override
-	public void dispose() {
+	public void disposeGame() {
 		models.dispose();
 		model.dispose();
 	}
