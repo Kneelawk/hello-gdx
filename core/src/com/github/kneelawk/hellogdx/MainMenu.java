@@ -53,12 +53,12 @@ public class MainMenu extends ScreenGame {
 		list.setItems(games);
 		ScrollPane listScroller = new ScrollPane(list, skin);
 		listScroller.setWidth(400);
-		table.add(listScroller).colspan(2);
+		table.add(listScroller).colspan(2).fillX();
 
 		table.row();
 
 		TextButton quit = new TextButton("Quit", skin);
-		table.add(quit);
+		table.add(quit).fillX();
 
 		quit.addListener(new ChangeListener() {
 			@Override
@@ -68,7 +68,7 @@ public class MainMenu extends ScreenGame {
 		});
 
 		TextButton play = new TextButton("Play", skin);
-		table.add(play);
+		table.add(play).fillX();
 
 		play.addListener(new ChangeListener() {
 			@Override
