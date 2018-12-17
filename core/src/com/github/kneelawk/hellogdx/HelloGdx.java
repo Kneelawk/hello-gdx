@@ -21,7 +21,7 @@ public class HelloGdx extends Game {
 
 		games = new HashMap<>();
 
-		games.put("HelloGDX", new HelloGdxScreen());
+		games.put("HelloGDX", new HelloGdxScreen(this));
 
 		mainMenu = new MainMenu(this, GdxArrays.newArray(games.keySet()));
 
@@ -30,6 +30,10 @@ public class HelloGdx extends Game {
 
 	public void exit() {
 		Gdx.app.exit();
+	}
+
+	public void mainMenu() {
+		setScreen(mainMenu);
 	}
 
 	public void play(String name) {

@@ -1,19 +1,41 @@
 
 default-k.png
-size: 512,128
+size: 512,256
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+back-button
+  rotate: false
+  xy: 2, 84
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+check-off
+  rotate: false
+  xy: 175, 198
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+textfield
+  rotate: false
+  xy: 175, 198
+  size: 14, 14
+  split: 3, 3, 3, 3
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
 check-on
   rotate: false
-  xy: 132, 27
+  xy: 132, 154
   size: 14, 14
   orig: 14, 14
   offset: 0, 0
   index: -1
 cursor
   rotate: false
-  xy: 154, 44
+  xy: 154, 171
   size: 3, 3
   split: 1, 1, 1, 1
   orig: 3, 3
@@ -21,14 +43,14 @@ cursor
   index: -1
 default
   rotate: false
-  xy: 2, 21
+  xy: 2, 18
   size: 128, 64
   orig: 128, 64
   offset: 0, 0
   index: -1
 default-pane
   rotate: false
-  xy: 132, 22
+  xy: 132, 149
   size: 5, 3
   split: 1, 1, 1, 1
   orig: 5, 3
@@ -36,7 +58,7 @@ default-pane
   index: -1
 default-rect-pad
   rotate: false
-  xy: 132, 22
+  xy: 132, 149
   size: 5, 3
   split: 1, 1, 1, 1
   orig: 5, 3
@@ -44,7 +66,7 @@ default-rect-pad
   index: -1
 default-pane-noborder
   rotate: false
-  xy: 5, 2
+  xy: 386, 221
   size: 1, 1
   split: 0, 0, 0, 0
   orig: 1, 1
@@ -52,7 +74,7 @@ default-pane-noborder
   index: -1
 default-rect
   rotate: false
-  xy: 175, 66
+  xy: 191, 209
   size: 3, 3
   split: 1, 1, 1, 1
   orig: 3, 3
@@ -60,7 +82,7 @@ default-rect
   index: -1
 default-rect-down
   rotate: false
-  xy: 170, 60
+  xy: 170, 187
   size: 3, 3
   split: 1, 1, 1, 1
   orig: 3, 3
@@ -68,7 +90,7 @@ default-rect-down
   index: -1
 default-round
   rotate: false
-  xy: 161, 65
+  xy: 427, 233
   size: 12, 20
   split: 5, 5, 5, 4
   pad: 4, 4, 1, 1
@@ -77,7 +99,7 @@ default-round
   index: -1
 default-round-down
   rotate: false
-  xy: 427, 106
+  xy: 161, 192
   size: 12, 20
   split: 5, 5, 5, 4
   pad: 4, 4, 1, 1
@@ -86,7 +108,7 @@ default-round-down
   index: -1
 default-round-large
   rotate: false
-  xy: 132, 43
+  xy: 132, 170
   size: 20, 20
   split: 5, 5, 5, 4
   orig: 20, 20
@@ -94,7 +116,7 @@ default-round-large
   index: -1
 default-scroll
   rotate: false
-  xy: 405, 106
+  xy: 405, 233
   size: 20, 20
   split: 2, 2, 2, 2
   orig: 20, 20
@@ -102,7 +124,7 @@ default-scroll
   index: -1
 default-select
   rotate: false
-  xy: 132, 65
+  xy: 132, 192
   size: 27, 20
   split: 4, 14, 4, 4
   orig: 27, 20
@@ -110,7 +132,7 @@ default-select
   index: -1
 default-select-selection
   rotate: false
-  xy: 148, 38
+  xy: 148, 165
   size: 3, 3
   split: 1, 1, 1, 1
   orig: 3, 3
@@ -118,7 +140,7 @@ default-select-selection
   index: -1
 default-slider
   rotate: false
-  xy: 376, 87
+  xy: 376, 214
   size: 8, 8
   split: 2, 2, 2, 2
   orig: 8, 8
@@ -126,14 +148,14 @@ default-slider
   index: -1
 default-slider-knob
   rotate: false
-  xy: 441, 108
+  xy: 441, 235
   size: 9, 18
   orig: 9, 18
   offset: 0, 0
   index: -1
 default-splitpane
   rotate: false
-  xy: 405, 101
+  xy: 405, 228
   size: 5, 3
   split: 0, 5, 0, 0
   orig: 5, 3
@@ -141,7 +163,7 @@ default-splitpane
   index: -1
 default-splitpane-vertical
   rotate: false
-  xy: 18, 14
+  xy: 18, 11
   size: 3, 5
   split: 0, 0, 0, 5
   orig: 3, 5
@@ -149,7 +171,7 @@ default-splitpane-vertical
   index: -1
 default-window
   rotate: false
-  xy: 376, 97
+  xy: 376, 224
   size: 27, 29
   split: 4, 3, 20, 3
   orig: 27, 29
@@ -157,50 +179,35 @@ default-window
   index: -1
 hello-libgdx
   rotate: false
-  xy: 2, 87
+  xy: 2, 214
   size: 372, 39
   orig: 372, 39
   offset: 0, 0
   index: -1
 selection
   rotate: false
-  xy: 2, 2
+  xy: 452, 252
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
-textfield
-  rotate: false
-  xy: 154, 49
-  size: 14, 14
-  split: 3, 3, 3, 3
-  orig: 14, 14
-  offset: 0, 0
-  index: -1
-check-off
-  rotate: false
-  xy: 154, 49
-  size: 14, 14
-  orig: 14, 14
-  offset: 0, 0
-  index: -1
 tree-minus
   rotate: false
-  xy: 2, 5
+  xy: 2, 2
   size: 14, 14
   orig: 14, 14
   offset: 0, 0
   index: -1
 tree-plus
   rotate: false
-  xy: 175, 71
+  xy: 154, 176
   size: 14, 14
   orig: 14, 14
   offset: 0, 0
   index: -1
 white
   rotate: false
-  xy: 191, 82
+  xy: 175, 193
   size: 3, 3
   orig: 3, 3
   offset: 0, 0
