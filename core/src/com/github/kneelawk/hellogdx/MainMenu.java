@@ -31,7 +31,7 @@ public class MainMenu extends ScreenGame {
 	public void init() {
 		Gdx.gl.glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
-		stage = new Stage(new FitViewport(800, 480));
+		stage = new Stage(new FitViewport(848, 480));
 
 		TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("skins/default-k/default-k.atlas"));
 

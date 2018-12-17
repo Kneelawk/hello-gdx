@@ -40,7 +40,7 @@ public class HelloGdxScreen extends ScreenGame {
 	public void init() {
 		Gdx.gl.glClearColor(0.1f, 0.1f, 0.1f, 1f);
 
-		stage = new Stage(new FitViewport(800, 480));
+		stage = new Stage(new FitViewport(848, 480));
 
 		Skin skin = new Skin();
 		skin.addRegions(new TextureAtlas(Gdx.files.internal("skins/default-k/default-k.atlas")));
@@ -51,7 +51,7 @@ public class HelloGdxScreen extends ScreenGame {
 		stage.addActor(root);
 
 		ImageButton back = new ImageButton(skin.getDrawable("back-button"));
-		root.add(back).width(32).height(32).expand().align(Align.topLeft);
+		root.add(back).width(48).height(48).expand().align(Align.topLeft);
 
 		back.addListener(new ChangeListener() {
 			@Override
